@@ -41,7 +41,7 @@ if (attendancePercent < 60) {
 } else if (attendancePercent < 85) {
     circle.style.stroke = "#ffa500"; // Yellow-orange
 } else {
-    circle.style.stroke = "#ff6600"; // Default color
+    circle.style.stroke = "#ff6600"; 
 }
 
 // greating card
@@ -69,7 +69,7 @@ const studentData = {
     department: "Computer Science",
     year: "Final Year",
     reports: "Good Attendance",
-    img: "/assets/std-rem.png" // Placeholder image (Replace later)
+    img: "assets/std-rem.png" 
 };
 
 // Set student data in HTML
@@ -87,7 +87,7 @@ const calendarDays = document.getElementById("calendar-days");
 const prevMonthBtn = document.getElementById("prev-month");
 const nextMonthBtn = document.getElementById("next-month");
 
-let currentDate = new Date(); // Default to today's date
+let currentDate = new Date(); /
 
 // Define Lab Days (Tuesday, Wednesday, Thursday)
 const labDays = [2, 3, 5]; // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
@@ -103,9 +103,8 @@ function renderCalendar() {
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    calendarDays.innerHTML = ""; // Clear previous content
+    calendarDays.innerHTML = ""; 
 
-    // Fill empty spaces for first week alignment
     for (let i = 0; i < firstDay; i++) {
         let emptyDiv = document.createElement("div");
         calendarDays.appendChild(emptyDiv);
@@ -124,7 +123,7 @@ function renderCalendar() {
             dayDiv.classList.add("lab-day");
         }
 
-        // Highlight today's date
+        
         if (day === new Date().getDate() && month === new Date().getMonth() && year === new Date().getFullYear()) {
             dayDiv.classList.add("today");
         }
@@ -220,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     borderWidth: 2,
                     pointRadius: 4,
                     pointBackgroundColor: "#ff9800",
-                    tension: 0.4, // Smooth curves
+                    tension: 0.4,
                 },
                 {
                     label: "Week 2",
